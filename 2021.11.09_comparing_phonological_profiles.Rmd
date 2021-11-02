@@ -1,0 +1,101 @@
+---
+title: "Comparing cross-language phonological profiles"
+author: |
+    | George Moroz
+    | 
+    | \small Linguistic Convergence Laboratory (HSE University)
+    |
+    | November 9, 2021
+    |
+    |
+    | ![](images/00_qrcode.png)
+    | presentation is available here: 
+output: 
+  beamer_presentation:
+    df_print: kable
+    latex_engine: xelatex
+    citation_package: natbib
+    includes:
+      in_header: "config/presento.sty"
+bibliography: bibliography.bib
+biblio-style: "apalike"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+# setwd("/home/agricolamz/work/materials/2021.11.09_comparing_phonological_profiles")
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, dev='cairo_pdf')
+options(tinytex.verbose = TRUE)
+library(tidyverse)
+theme_set(theme_bw())
+
+# create qrcode
+# library(qrcode)
+# png(filename="images/00_qrcode.png", width = 150, height = 150)
+# plot(qr_code("https://github.com/agricolamz/2021.11.09_comparing_phonological_profiles/raw/master/2021.11.09_comparing_phonological_profiles.pdf"))
+# dev.off()
+```
+
+[//]: # (Simpson, A. P. (1999) Fundamental problems in comparative phonetics and phonology. does UPSID help to solve them видео про энтропию [Ackerman, Molouf 2013] https://www.youtube.com/watch?v=lr2wyyKCRRM)
+
+## How I decided to give this talk?
+
+* During the talk in our Lab with Misha and Ezequiel
+
+**Jeff Good:** How you came up with the idea of calculating phonological distances? Is it some established procedure?
+
+**Me:** No, we thought that it is the most obvious step... \pause
+
+* The second reason:
+
+```{r list, echo = FALSE, cache=TRUE}
+library(tweetrmd)
+tweet_screenshot(tweet_url("LinguList", "1436623387141492739"))
+```
+
+#  Materials for the analysis
+
+##  Materials for the analysis
+
+Materials for the analysis can be different:
+
+* segment\footnote[frame]{Lets leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
+* dictionaries;
+* parallel corpora.
+
+# Criticism by [@simpson99]
+
+## Criticism by [@simpson99]
+
+#  Complexity based approaches
+
+## [@pellegrino09]
+
+```{r}
+knitr::include_graphics("images/pellegrino09.png", dpi=150)
+```
+
+## [@pellegrino09]
+
+* [@pellegrino09]
+    * [@chitoran09]
+    * [@ohala09]
+    * [@maddieson09]
+    * [@coupe09]
+* criticism of the complexity approach [@deutscher09]
+
+#  Distance based approaches
+
+## Distance based approaches
+
+* [@hoppenbrouwers01] (after [@heeringa04])
+* [@heeringa04]
+* [@eden18] --- Hamming distance
+* [@anderson21] --- Jaccard similarity
+
+## {}
+
+\LARGE Thank you for your attention!
+
+# References {.allowframebreaks}
