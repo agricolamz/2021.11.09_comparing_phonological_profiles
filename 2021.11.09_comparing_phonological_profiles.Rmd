@@ -9,7 +9,7 @@ author: |
     |
     |
     | ![](images/00_qrcode.png)
-    | presentation is available here: 
+    | presentation is available here: tinyurl.com/yj2tacek
 output: 
   beamer_presentation:
     df_print: kable
