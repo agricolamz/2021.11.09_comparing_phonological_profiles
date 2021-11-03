@@ -37,7 +37,7 @@ theme_set(theme_bw())
 # dev.off()
 ```
 
-[//]: # (Simpson, A. P. (1999) Fundamental problems in comparative phonetics and phonology. does UPSID help to solve them видео про энтропию [Ackerman, Molouf 2013] https://www.youtube.com/watch?v=lr2wyyKCRRM)
+[//]: # (видео про энтропию [Ackerman, Molouf 2013]  https://www.youtube.com/watch?v=lr2wyyKCRRM)
 
 ## How I decided to give this talk?
 
@@ -62,11 +62,25 @@ Materials for the analysis can be different:
 
 * segment\footnote[frame]{Lets leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
 * dictionaries;
-* parallel corpora.
+* parallel corpora;
+* unparalleled corpora.
+
+\setcounter{footnote}{0}
 
 # Criticism by [@simpson99]
 
 ## Criticism by [@simpson99]
+
+[@simpson99] attacks UPSID\footnote[frame]{UPSID stands for UCLA Phonological Segment Inventory Database \citep{maddieson87} which consists of the phonemic systems of a
+representative sample of 451 (this number changes from publication to publication) of the world's languages in machine-readable form. Now UPSID can be accessed via PHOIBLE database \citep{phoible19}.}-like researches:
+
+* phoneme masks allophones
+    * Standard High German /ç/ stands for [ç], [x] and [χ];
+    * "The allophone no longer represents the phoneme, it *replaces* it";
+* phonological relations between segments is lost
+    * comparing just vowel inventories it is impossible to get information about e. g. vowel harmony
+
+\setcounter{footnote}{0}
 
 #  Complexity based approaches
 
