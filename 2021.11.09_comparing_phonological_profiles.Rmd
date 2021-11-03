@@ -87,20 +87,22 @@ My metaphor: omelet and pancakes share all ingredients, but they are significant
 
 #  Complexity based approaches
 
-## [@pellegrino09]
+## [@pellegrino09] and [@sampson09]
 
-```{r}
-knitr::include_graphics("images/pellegrino09.png", dpi=150)
+```{r, fig.align='center'}
+knitr::include_graphics("images/complexity.png")
 ```
 
-## [@pellegrino09]
+## [@pellegrino09] and [@sampson09]
 
 * [@pellegrino09]
     * [@chitoran09]
     * [@ohala09]
     * [@maddieson09]
     * [@coupe09]
-* criticism of the complexity approach [@deutscher09]
+* [@sampson09]
+    * [@nichols09]
+    * [@deutscher09]
 
 #  Distance based approaches
 
