@@ -79,7 +79,9 @@ representative sample of 451 (this number changes from publication to publicatio
     * "The allophone no longer represents the phoneme, it *replaces* it";
 * phonological relations between segments is lost
     * comparing just vowel inventories it is impossible to get information about e. g. vowel harmony;
-* there is no non-arbitrary way of assign phonological features (e. g. SPE [@chomsky68]) to segments.
+* there is no non-arbitrary way of assign phonological features (e. g. SPE [@chomsky68]) to segments. \pause
+
+My metaphor: omelet and pancakes share all ingredients, but they are significantly different meals.
 
 \setcounter{footnote}{0}
 
