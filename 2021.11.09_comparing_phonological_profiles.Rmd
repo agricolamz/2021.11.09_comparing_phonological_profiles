@@ -78,7 +78,8 @@ representative sample of 451 (this number changes from publication to publicatio
     * Standard High German /ç/ stands for [ç], [x] and [χ];
     * "The allophone no longer represents the phoneme, it *replaces* it";
 * phonological relations between segments is lost
-    * comparing just vowel inventories it is impossible to get information about e. g. vowel harmony
+    * comparing just vowel inventories it is impossible to get information about e. g. vowel harmony;
+* there is no non-arbitrary way of assign phonological features (e. g. SPE [@chomsky68]) to segments.
 
 \setcounter{footnote}{0}
 
