@@ -96,13 +96,33 @@ knitr::include_graphics("images/complexity.png")
 ## [@pellegrino09] and [@sampson09]
 
 * [@pellegrino09]
-    * [@chitoran09]
     * [@ohala09]
     * [@maddieson09]
     * [@coupe09]
 * [@sampson09]
     * [@nichols09]
     * [@deutscher09]
+
+## [@nichols09]
+
+The main goal of this paper is to calculate overall complexity for a typological sample of languages based on phonology, synthesis, classification (gender, numeral classifiers), syntax, and lexicon. The main goal is too prove:
+
+* that all languages **are not** equal in complexity;
+* that different parts of grammar **do not** compensate for complexity in other parts of grammar. \pause
+
+### Phonological features in the 
+* number of contrastive manners of articulation in stops;
+* number of vowel quality distinctions;
+* tone system (none/simple/complex, after [@maddieson13b]);
+* syllable structure (after [@maddieson13a]).
+
+## [@nichols09: 116]: results
+
+```{r, fig.align='center'}
+knitr::include_graphics("images/nichols09.png")
+```
+
+Phonological complexity (N = 137)
 
 #  Distance based approaches
 
