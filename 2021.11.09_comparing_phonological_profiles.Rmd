@@ -39,6 +39,9 @@ theme_set(theme_bw())
 
 [//]: # (видео про энтропию [Ackerman, Molouf 2013]  https://www.youtube.com/watch?v=lr2wyyKCRRM)
 
+## Goals
+
+
 ## How I decided to give this talk?
 
 * During the talk in our Lab with Misha and Ezequiel
@@ -119,10 +122,55 @@ The main goal of this paper is to calculate overall complexity for a typological
 ## [@nichols09: 116]: results
 
 ```{r, fig.align='center'}
-knitr::include_graphics("images/nichols09.png")
+knitr::include_graphics("images/nichols09.png", dpi = 200)
 ```
 
 Phonological complexity (N = 137)
+
+## [@ohala09]
+
+'Secondary distinctive features' are important for phonologization:
+
+* nasals in French: saint [sɛ̃] < Latin sanctus 'holy';
+* average F0 contour of vowels following English stops is falling after voiceless and rising after voiced.
+
+They are not captured by the segmental inventories.
+
+Allophones, like English /t/: [tʰ] vs [t] vs [ɾ] (cf [@simpson99]).
+
+## [@maddieson09]
+
+## [@coupe09]
+
+* In this work authors use phonological features as a distances between segments and then use graphs with segments in the nodes and distances in the edges:
+
+```{r, fig.align='center'}
+knitr::include_graphics("images/coupe09.png", dpi = 380)
+```
+
+## [@coupe09]
+
+* In this work authors use phonological features as a distances between segments and then use graphs with segments in the nodes and distances in the edges.
+* Afterwords authors use *off-diagonal complexity* proposed by [@claussen07]\footnote[frame]{Authors motivated their choice, because this measure
+\begin{itemize}
+\item does not explicitly take into account graph size;
+\item is sensitive to the presence of hierarchical sub-structures in the network;
+\item is minimal for regular graphs and maximal for free-scale graphs.
+\end{itemize}
+Unfortunately, off-diagonal complexity can not be calculated for valued graphs, so authors were ought to drop phonologcial distance values from their graphs.
+} that make it possible to disassociate from linguistics and phonology and rely purely on graph structure.
+
+\setcounter{footnote}{0}
+
+## [@deutscher09]
+
+* 'All Languages are Equally Complex' --- is a legend (actually, a lot of papers from [@sampson09] state the same).
+* Complexity is a polysemous notion: some scholars focus on multipartite nature of language, others on complicated relations within the system.
+* Overall complexity is better to present as a vector of values rather then one value.
+
+## Conclusions
+
+Despite of the critics that language phonological system is a complex system that can not be reduced to the set of its elements [@simpson99; @ohala09; @coupe09; @deutscher09] I think that any phonological complexity measure can be used in order to compare different languages. The sophistication and granularity of this measure will influence the possible effect size gathered by this measure.
 
 #  Distance based approaches
 
@@ -130,8 +178,20 @@ Phonological complexity (N = 137)
 
 * [@hoppenbrouwers01] (after [@heeringa04])
 * [@heeringa04]
-* [@eden18] --- Hamming distance
-* [@anderson21] --- Jaccard similarity
+* [@eden18]
+* [@anderson21]
+
+## [@anderson21]
+
+In this paper authors apply **Jaccard similarity** between two phoneme inventories, that is ratio of similar segments in two languages out of all possible segments in two languages. \pause
+
+The reason, why authors do that is because their goal is to compare different inventories of the **same** languages across four databases of phonological inventories (UPSID [@maddieson87], LAPSyD [@maddieson13], Core PHOIBLE [@phoible19], JIPA [@baird21]). The results are unfavorable: researchers found a high degree of variation across datasets.
+
+## [@heeringa04]
+
+## [@eden18]
+
+## Conclusions
 
 ## {}
 
