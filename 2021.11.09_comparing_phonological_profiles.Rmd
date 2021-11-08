@@ -285,8 +285,123 @@ tibble(a = c("A", "A", "A", "A", "B"),
   group_by(data) %>% 
   summarise(entropy = round(-sum(ratio*log2(ratio)), 2)) %>% 
   arrange(entropy) %>% 
+  rename(dataset = data) %>% 
   knitr::kable()
 ```
+
+## [@eden18]: Cross-entropy 
+
+Cross-entropy measure is used in order to compare two distributions $X$ and $Y$:
+
+$$H(X, Y) = - \sum_{i = 1}^n{P(x_i)\times\log_2P(y_i)}$$
+
+
+```{r cross_entropy, cache=TRUE}
+cross.entropy <- function(p, phat){
+  x <- 0
+  for (i in 1:length(p)){
+    x <- x + (p[i] * log2(phat[i]))
+  }
+  return(-x)
+}
+
+tibble(a = c("A", "A", "A", "A", "B"),
+       b = c("A", "A", "A", "A", "B"),
+       c = c("A", "A", "A", "B", "B"),
+       d = c("A", "A", "B", "B", "B")) %>% 
+  pivot_longer(names_to = "id", values_to = "value", a:d) %>% 
+  group_by(id) %>% 
+  mutate(data = str_c(value, collapse = "-")) %>% 
+  count(data, value) %>% 
+  mutate(ratio = n/sum(n)) %>% 
+  ungroup()->
+  ratios
+
+combn(c(letters[1:4]), 2) %>% 
+  t() %>% 
+  as.data.frame() %>% 
+  distinct() ->
+  stimuli
+
+map_dfr(1:nrow(stimuli), function(i){
+ratios %>% 
+  filter(id %in% stimuli[i,]) %>% 
+  select(-n, -data) %>% 
+  pivot_wider(names_from = id, values_from = ratio, values_fill = 0) %>% 
+  select(-value) %>% 
+  summarise(data_1 = ratios %>% filter(id %in% stimuli[i,1]) %>% distinct(data) %>%  pull(data),
+            cross_entropy = round(cross.entropy(p = unlist(.[,1]), phat = unlist(.[,2])), 2),
+            data_2 = ratios %>% filter(id %in% stimuli[i,2]) %>% distinct(data) %>%  pull(data))
+}) %>% 
+  arrange(cross_entropy) %>% 
+  rename(`cross-entropy` = cross_entropy,
+         `first dataset` = data_1,
+         `second dataset` = data_2) %>% 
+  distinct() %>% 
+  knitr::kable()
+```
+
+
+## [@eden18]: Kullback-Leibler divergence
+
+As we have seen, if distributions $X$ and $Y$ are equal, then the cross-entropy is equal to the entropy of that distribution. So there is a way to normalize it called Kullback-Leibler divergence measure:
+
+$$D_{KL}(P,Q) = H(P, Q) − H(P )$$
+
+```{r kullback_leibler, cache=TRUE}
+entropy <- function(d){
+  x <- 0
+  for (i in d){
+    x <- x + (i * log(i, base = 2))
+  }
+  return(-x)
+}
+
+tibble(a = c("A", "A", "A", "A", "B"),
+       b = c("A", "A", "A", "A", "B"),
+       c = c("A", "A", "A", "B", "B"),
+       d = c("A", "A", "B", "B", "B")) %>% 
+  pivot_longer(names_to = "id", values_to = "value", a:d) %>% 
+  group_by(id) %>% 
+  mutate(data = str_c(value, collapse = "-")) %>% 
+  count(data, value) %>% 
+  mutate(ratio = n/sum(n)) %>% 
+  ungroup()->
+  ratios
+
+combn(c(letters[1:4]), 2) %>% 
+  t() %>% 
+  as.data.frame() %>% 
+  distinct() ->
+  stimuli
+
+map_dfr(1:nrow(stimuli), function(i){
+ratios %>% 
+  filter(id %in% stimuli[i,]) %>% 
+  select(-n, -data) %>% 
+  pivot_wider(names_from = id, values_from = ratio, values_fill = 0) %>% 
+  select(-value) %>% 
+  summarise(data_1 = ratios %>% filter(id %in% stimuli[i,1]) %>% distinct(data) %>%  pull(data),
+            entropy = round(entropy(d = unlist(.[,1])), 2),
+            cross_entropy = round(cross.entropy(p = unlist(.[,1]), phat = unlist(.[,2])), 2),
+            kullback_leibler =cross_entropy-entropy,
+            data_2 = ratios %>% filter(id %in% stimuli[i,2]) %>% distinct(data) %>%  pull(data))
+}) %>%  
+  select(-entropy, -cross_entropy) %>% 
+  arrange(kullback_leibler) %>% 
+  distinct() %>% 
+  rename(`Kullback-Leibler` = kullback_leibler,
+         `first dataset` = data_1,
+         `second dataset` = data_2) %>% 
+  knitr::kable()
+```
+
+## [@eden18]: application
+
+* Corpus of 20 European languages, taken from the proceedings of the European Parliament (Dutch, English, German, French, Portuguese, Spanish).
+* 8 samples of 1000 lines per language, sampled at random
+
+
 
 ## Conclusions
 
