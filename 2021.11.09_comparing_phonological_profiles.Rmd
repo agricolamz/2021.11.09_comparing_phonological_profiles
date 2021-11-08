@@ -255,6 +255,14 @@ All four examples are normalized by the value 3.
 
 ## [@eden18]
 
+* Parametric typology:
+    * annotate languages according to 27 syllable structure parameters, and 29 inventory parameters;
+    * apply Hamming distance,\footnote[frame]{That is just ordered version of Jaccard distance: ratio of similar units in two languages out of all possible units in two languages.}
+
+
+\setcounter{footnote}{0}
+
+
 ## Conclusions
 
 ## {}
