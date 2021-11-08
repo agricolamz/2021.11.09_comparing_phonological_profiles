@@ -258,10 +258,35 @@ All four examples are normalized by the value 3.
 * Parametric typology:
     * annotate languages according to 27 syllable structure parameters, and 29 inventory parameters;
     * apply Hamming distance,\footnote[frame]{That is just ordered version of Jaccard distance: ratio of similar units in two languages out of all possible units in two languages.}
-
+* Cross-entropy of transcribed example texts
 
 \setcounter{footnote}{0}
 
+## [@eden18]: Shannon information entropy 
+
+Entropy is a measure of randomness or uncertainty proposed by [@shannon48].
+
+$$H(X) = - \sum_{i = 1}^n{P(x_i)\times\log_2P(x_i)}$$
+
+Possible entropy values are $H(X) \in [0, +\infty]$: 
+
+```{r}
+tibble(a = c("A", "A", "A", "A", "B"),
+       b = c("A", "A", "A", "B", "B"),
+       c = c("A", "A", "B", "B", "B"),
+       e = c("A", "A", "B", "B", "C"),
+       f = c("A", "B", "C", "A", "B"),
+       g = c("A", "A", "A", "A", "A")) %>% 
+  pivot_longer(names_to = "id", values_to = "value", a:g) %>% 
+  group_by(id) %>% 
+  mutate(data = str_c(value, collapse = "-")) %>% 
+  count(data, value) %>% 
+  mutate(ratio = n/sum(n)) %>% 
+  group_by(data) %>% 
+  summarise(entropy = round(-sum(ratio*log2(ratio)), 2)) %>% 
+  arrange(entropy) %>% 
+  knitr::kable()
+```
 
 ## Conclusions
 
