@@ -226,9 +226,9 @@ Authors applied the same stratagy as [@hoppenbrouwers01], but used words as a co
 
 Since [@hoppenbrouwers01] and [@nerbonne01] methods does not account for unit order Heeringa decided to use Levenstein distance [@levenstein65]. The Levenstein distance is the minimum number of unit edits (insertions, deletions or substitutions) that should be applied to the unit string in order to get another:
 
-* the distance between *sing* and *king* is 1
-* the distance between *sing* and *sign* is 1
-* the distance between *sing* and *sight* is 3
+* the distance between *pancake* and *omelet* is `r stringdist::stringdist("pancake", "omelet")`
+* the distance between *pancake* and *cake* is `r stringdist::stringdist("pancake", "cake")`
+* the distance between *sing* and *sign* is `r stringdist::stringdist("sing", "sign")`
 
 Shortcoming:
 
