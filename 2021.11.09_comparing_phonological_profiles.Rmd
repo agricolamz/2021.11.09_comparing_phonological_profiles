@@ -39,9 +39,6 @@ theme_set(theme_bw())
 
 [//]: # (видео про энтропию [Ackerman, Molouf 2013]  https://www.youtube.com/watch?v=lr2wyyKCRRM)
 
-## Goals
-
-
 ## How I decided to give this talk?
 
 * During the talk in our Lab with Misha and Ezequiel
@@ -57,11 +54,17 @@ library(tweetrmd)
 tweet_screenshot(tweet_url("LinguList", "1436623387141492739"))
 ```
 
-#  Materials for the analysis
+## How I decided to give this talk?
+
+The main reason for this talk is that I performed calculation of phonological distances (or caused people to do so) for Circassian languages [@moroz21] and Andic branch of East Caucasian languages [@moroz20; @davidenko21; @tsyzova21] in order to get a simple less-connected to language phylogeny distance between different idioms. \pause
+
+But does this measure make any sense? How can we compare phonological profiles of languages? \pause
+
+Unlike lexicostatistical distance the phonological distance can be an evidence for language contact, since languages can adopt some feature or property of another (see [@andersson17]). This can be possible explained by **Perceptual Magnet framework** [@blevins17]. In most cases phonological change in unrelated languages is more salient to linguists, however it is worth mentioning that there is a work about how to catch contact-induced change in related languages [@bowern13].
 
 ##  Materials for the analysis
 
-Materials for the analysis can be different:
+Materials for the phonological distance calculation can be different:
 
 * segment\footnote[frame]{Lets leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
 * dictionaries;
