@@ -143,6 +143,28 @@ Allophones, like English /t/: [tʰ] vs [t] vs [ɾ] (cf [@simpson99]).
 
 ## [@maddieson09]
 
+* Merged measure for consonants, vowels, tones and syllable structure;
+
+```{r}
+knitr::include_graphics("images/maddieson09_ci.png", dpi = 420)
+```
+
+## [@maddieson09]
+
+* Merged measure for consonants, vowels, tones and syllable structure;
+
+```{r}
+knitr::include_graphics("images/maddieson09_cm.png", dpi = 420)
+```
+
+## [@maddieson09]
+
+* Merged measure for consonants, vowels, tones and syllable structure;
+* The number of possible distinct syllables allowed by the language (cf [@shosted06]);
+* Frequency measures based on lexicon or texts (cf [@davidenko21] for Andic):
+
+"To compare these data, it is useful to calculate some kind of index. There are a number of ways this might be done. One possibility is to calculate a summed frequency $\times$ complexity score over the top ten segments, in which each segment contributes decreasingly according to its rank, and increasingly according to its complexity". [@maddieson09: 97]
+
 ## [@coupe09]
 
 * In this work authors use phonological features as a distances between segments and then use graphs with segments in the nodes and distances in the edges:
