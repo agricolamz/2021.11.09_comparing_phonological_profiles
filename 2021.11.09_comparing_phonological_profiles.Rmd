@@ -212,6 +212,13 @@ In this paper authors apply **Jaccard similarity** between two phoneme inventori
 
 The reason, why authors do that is because their goal is to compare different inventories of the **same** languages across four databases of phonological inventories (UPSID [@maddieson87], LAPSyD [@maddieson13], Core PHOIBLE [@phoible19], JIPA [@baird21]). The results are unfavorable: researchers found a high degree of variation across datasets.
 
+## [@hoppenbrouwers01] after [@heeringa04]
+
+In this work distance between languages is calculated as following:
+
+* Extract unit (it can be segments, syllables or phonological features) frequencies from corpora or dictionary.
+* The distance between two languages is equal to the sum of the differences between the corresponding unit frequencies.
+
 ## [@heeringa04]
 
 ## [@eden18]
