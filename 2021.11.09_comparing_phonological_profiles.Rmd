@@ -202,6 +202,7 @@ Despite of the critics that language phonological system is a complex system tha
 ## Distance based approaches
 
 * [@hoppenbrouwers01] (after [@heeringa04])
+* [@nerbonne01]
 * [@heeringa04]
 * [@eden18]
 * [@anderson21]
@@ -217,7 +218,17 @@ The reason, why authors do that is because their goal is to compare different in
 * Extract unit (it can be segments, syllables or phonological features) frequencies from corpora or dictionary.
 * The distance between two languages is the sum of the differences between the corresponding unit frequencies.
 
+## [@nerbonne01]
+
+Authors applied the same stratagy as [@hoppenbrouwers01], but used words as a corpora. So the idiom distance is calculated as an average word distance.
+
 ## [@heeringa04]
+
+Since [@hoppenbrouwers01] and [@nerbonne01] methods does not account for unit order Heeringa decided to use Levenstein distance [@levenstein65]. The Levenstein distance is the minimum number of unit edits (insertions, deletions or substitutions) that should be applied to the unit string in order to get another:
+
+* the distance between *sing* and *king* is 1
+* the distance between *sing* and *sign* is 1
+* the distance between *sing* and *sight* is 3
 
 ## [@eden18]
 
