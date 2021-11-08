@@ -398,12 +398,34 @@ ratios %>%
 
 ## [@eden18]: application
 
-* Corpus of 20 European languages, taken from the proceedings of the European Parliament (Dutch, English, German, French, Portuguese, Spanish).
-* 8 samples of 1000 lines per language, sampled at random
+* 7 languages from the corpus of European languages (Portuguese, French, Spanish, German, English, Dutch, Greek)
 
+```{r, fig.align='center'}
+knitr::include_graphics("images/eden18.png", dpi = 50)
+```
 
+## [@eden18]: application
+
+* 7 languages from the corpus of European languages (Portuguese, French, Spanish, German, English, Dutch, Greek)
+* Pearson correlation between some metrics:
+
+|                                 | Parameter | Entropy: IPA | Entropy: static binary features |
+|---------------------------------|-----------|--------------|---------------------------------|
+| Entropy: IPA                    | 0.67      |              |                                 |
+| Entropy: static binary features | 0.55      | 0.94         |                                 |
+| Entropy: ls binary features     | 0.33      | 0.46         | 0.38                            |
 
 ## Conclusions
+
+In this talk I presented multiple methods of calculating phonological distances between languages.
+
+It is worth noting all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language.
+
+Both complexity-based and distance based approaches are valid for language comparison:
+* the complexity-based approach probably is better by design, but it depends on feature set that should be chosen by linguists;
+* the distance-based approach is better in capturing all phonotactic details present in the data (as [@maddieson09] proposed), but it depends on more or less comparable data from different languages.
+
+It is also worth mentioning that both [@heeringa04] and [@eden18] discuss and apply different methods for acoustic distances across languages, but I decided to categorize it as a different topic.
 
 ## {}
 
