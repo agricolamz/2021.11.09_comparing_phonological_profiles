@@ -39,7 +39,7 @@ library(tidyverse)
 
 ## Why did I decide to give this talk?
 
-* During the talk about "Geography and language divergence: the case of Andic languages" at our Lab with Misha and Ezequiel
+* During the talk about "Geography and language divergence: the case of Andic languages" at our Lab
 
 **Jeff Good:** How did you come up with the idea of calculating phonological distances? Is it some established procedure?
 
