@@ -37,13 +37,13 @@ library(tidyverse)
 
 [//]: # (видео про энтропию [Ackerman, Molouf 2013]  https://www.youtube.com/watch?v=lr2wyyKCRRM)
 
-## How I decided to give this talk?
+## Why did I decide to give this talk?
 
-* During the talk in our Lab with Misha and Ezequiel
+* During the talk about "Geography and language divergence: the case of Andic languages" at our Lab with Misha and Ezequiel
 
-**Jeff Good:** How you came up with the idea of calculating phonological distances? Is it some established procedure?
+**Jeff Good:** How did you come up with the idea of calculating phonological distances? Is it some established procedure?
 
-**Me:** No, we thought that it is the most obvious step... \pause
+**Me:** No, we thought that this would be the most obvious step... \pause
 
 * The second reason:
 
@@ -52,19 +52,19 @@ library(tweetrmd)
 tweet_screenshot(tweet_url("LinguList", "1436623387141492739"))
 ```
 
-## How I decided to give this talk?
+## Why did I decide to give this talk?
 
-The main reason for this talk is that I performed calculation of phonological distances (or caused people to do so) for Circassian languages [@moroz21] and Andic branch of East Caucasian languages [@moroz20; @davidenko21; @tsyzova21] in order to get a simple less-connected to language phylogeny distance between different idioms. \pause
+The main reason for this talk is that I performed calculations of phonological distances (or supervised other people making calculations) for Circassian languages [@moroz21] and languages of the Andic branch of the East Caucasian family [@moroz20; @davidenko21; @tsyzova21], in order to get a simple distance between different idioms, that is less connected to language phylogeny. \pause
 
 But does this measure make any sense? How can we compare phonological profiles of languages? \pause
 
-Unlike lexicostatistical distance the phonological distance can be an evidence for language contact, since languages can adopt some feature or property of another (see [@andersson17]). This can be possible explained by **Perceptual Magnet framework** [@blevins17]. In most cases phonological change in unrelated languages is more salient to linguists, however it is worth mentioning that there is a work about how to catch contact-induced change in related languages [@bowern13].
+Unlike lexicostatistical distance, phonological distance can be evidence for language contact, since languages can adopt some phonological feature or property from a contact language (see [@andersson17]). This can possibly be explained by the **Perceptual Magnet framework** [@blevins17]. In most cases phonological change in unrelated languages is more salient to linguists, however it is worth mentioning that there is at least one study about how to catch contact-induced phonological change in related languages [@bowern13].
 
 ##  Materials for the analysis
 
-Materials for the phonological distance calculation can be different:
+Materials for the calculation of phonological distance can be different:
 
-* segment\footnote[frame]{Lets leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
+* segment\footnote[frame]{Let's leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
 * dictionaries;
 * parallel dictionaries;
 * corpora;
@@ -76,21 +76,21 @@ Materials for the phonological distance calculation can be different:
 
 ## Criticism by [@simpson99]
 
-[@simpson99] attacks UPSID\footnote[frame]{UPSID stands for UCLA Phonological Segment Inventory Database \citep{maddieson87} which consists of the phonemic systems of a
-representative sample of 451 (this number changes from publication to publication) of the world's languages in machine-readable form. Now UPSID can be accessed via PHOIBLE database \citep{phoible19}.}-like researches:
+[@simpson99] criticizes UPSID\footnote[frame]{UPSID stands for UCLA Phonological Segment Inventory Database \citep{maddieson87}, which consists of the phonemic systems of a
+representative sample of 451 (this number changes from publication to publication) of the world's languages in machine-readable form. UPSID can be accessed via the PHOIBLE database \citep{phoible19}.}-like researches: 
 
-* phoneme masks allophones
+* phonemes mask allophones
     * Standard High German /ç/ stands for [ç], [x] and [χ];
     * "The allophone no longer represents the phoneme, it *replaces* it";
-* phonological relations between segments is lost
-    * comparing just vowel inventories it is impossible to get information about e. g. vowel harmony;
-* there is no non-arbitrary way of assign phonological features (e. g. SPE [@chomsky68]) to segments. \pause
+* the phonological relations between segments are lost
+    * it is impossible to get information about e.g. vowel harmony by comparing just vowel inventories;
+* there is no non-arbitrary way of assigning phonological features (e.g. SPE [@chomsky68]) to segments. \pause
 
-My metaphor: omelet and pancakes share all ingredients, but they are significantly different meals.
+My metaphor: omelets and pancakes share the same ingredients, but they are significantly different meals.
 
 \setcounter{footnote}{0}
 
-#  Complexity based approaches
+#  Complexity-based approaches
 
 ## [@pellegrino09] and [@sampson09]
 
@@ -110,7 +110,7 @@ knitr::include_graphics("images/complexity.png")
 
 ## [@nichols09]
 
-The main goal of this paper is to calculate overall complexity for a typological sample of languages based on phonology, synthesis, classification (gender, numeral classifiers), syntax, and lexicon. The main goal is too prove:
+The main goal of this paper was to calculate the overall complexity for a typological sample of languages based on phonology, synthesis, classification (gender, numeral classifiers), syntax, and lexicon. The main goal was to prove:
 
 * that all languages **are not** equal in complexity;
 * that different parts of grammar **do not** compensate for complexity in other parts of grammar. \pause
@@ -166,7 +166,7 @@ knitr::include_graphics("images/maddieson09_cm.png", dpi = 420)
 
 ## [@coupe09]
 
-* In this work authors use phonological features as a distances between segments and then use graphs with segments in the nodes and distances in the edges:
+* In this work the authors use phonological features as distances between segments and then use graphs with segments as the nodes and distances as the edges:
 
 ```{r, fig.align='center'}
 knitr::include_graphics("images/coupe09.png", dpi = 380)
@@ -174,31 +174,31 @@ knitr::include_graphics("images/coupe09.png", dpi = 380)
 
 ## [@coupe09]
 
-* In this work authors use phonological features as a distances between segments and then use graphs with segments in the nodes and distances in the edges.
-* Afterwords authors use *off-diagonal complexity* proposed by [@claussen07]\footnote[frame]{Authors motivated their choice, because this measure
+* In this work the authors use phonological features as distances between segments and then use graphs with segments as the nodes and distances as the edges:
+* Then, the authors use the *off-diagonal complexity* proposed by [@claussen07],\footnote[frame]{Their motivation for this choice, was that this measure
 \begin{itemize}
 \item does not explicitly take into account graph size;
 \item is sensitive to the presence of hierarchical sub-structures in the network;
 \item is minimal for regular graphs and maximal for free-scale graphs.
 \end{itemize}
 Unfortunately, off-diagonal complexity can not be calculated for valued graphs, so authors were ought to drop phonologcial distance values from their graphs.
-} that make it possible to disassociate from linguistics and phonology and rely purely on graph structure.
+} which makes it possible to disassociate from linguistics and phonology and rely purely on graph structure.
 
 \setcounter{footnote}{0}
 
 ## [@deutscher09]
 
-* 'All Languages are Equally Complex' --- is a legend (actually, a lot of papers from [@sampson09] state the same).
-* Complexity is a polysemous notion: some scholars focus on multipartite nature of language, others on complicated relations within the system.
-* Overall complexity is better to present as a vector of values rather then one value.
+* 'All Languages are Equally Complex' --- is a myth (actually, a lot of papers from [@sampson09] state the same).
+* Complexity is a polysemous notion: some scholars focus on the multipartite nature of language, others on the complicated relations within the system.
+* Overall complexity is better to present as a vector of values rather than one value.
 
 ## Conclusions
 
-Despite of the critics that language phonological system is a complex system that can not be reduced to the set of its elements [@simpson99; @ohala09; @coupe09; @deutscher09] I think that any phonological complexity measure can be used in order to compare different languages. The sophistication and granularity of this measure will influence the possible effect size gathered by this measure.
+Despite the criticism that a language's phonological system is a complex system that can not be reduced to the set of its elements [@simpson99; @ohala09; @coupe09; @deutscher09], I think that any phonological complexity measure can be used in order to compare different languages. The sophistication and granularity of this measure will influence the possible effect size gathered by this measure.
 
-#  Distance based approaches
+#  Distance-based approaches
 
-## Distance based approaches
+## Distance-based approaches
 
 * [@hoppenbrouwers01] (after [@heeringa04])
 * [@nerbonne01] (after [@heeringa04])
@@ -208,22 +208,22 @@ Despite of the critics that language phonological system is a complex system tha
 
 ## [@anderson21]
 
-In this paper authors apply **Jaccard similarity** between two phoneme inventories, that is ratio of similar segments in two languages out of all possible segments in two languages. \pause
+In this paper the authors apply the **Jaccard similarity** between two phoneme inventories, that is a ratio of similar segments in two languages out of all the possible segments in two languages. \pause
 
-The reason, why authors do that is because their goal is to compare different inventories of the **same** languages across four databases of phonological inventories (UPSID [@maddieson87], LAPSyD [@maddieson13], Core PHOIBLE [@phoible19], JIPA [@baird21]). The results are unfavorable: researchers found a high degree of variation across datasets.
+The reason why authors do this, is because their goal is to compare different inventories of the **same** languages across four databases of phonological inventories (UPSID [@maddieson87], LAPSyD [@maddieson13], Core PHOIBLE [@phoible19], JIPA [@baird21]). The results are unfavorable: researchers found a high degree of variation across datasets.
 
 ## [@hoppenbrouwers01] after [@heeringa04]
 
-* Extract unit (it can be segments, syllables or phonological features) frequencies from corpora or dictionary.
+* Extract frequencies of units (these can be segments, syllables or phonological features) from corpora or dictionaries.
 * The distance between two languages is the sum of the differences between the corresponding unit frequencies.
 
 ## [@nerbonne01] after [@heeringa04]
 
-Authors applied the same stratagy as [@hoppenbrouwers01], but used words as a corpora. So the idiom distance is calculated as an average word distance.
+The authors applied the same stratagy as [@hoppenbrouwers01], but used words as corpora. So the idiom distance is calculated as an average word distance.
 
 ## [@heeringa04]
 
-Since [@hoppenbrouwers01] and [@nerbonne01] methods does not account for unit order Heeringa decided to use Levenstein distance [@levenstein65]. The Levenstein distance is the minimum number of unit edits (insertions, deletions or substitutions) that should be applied to the unit string in order to get another:
+Since the methods of [@hoppenbrouwers01] and [@nerbonne01] do not account for unit order, Heeringa decided to use the Levenstein distance [@levenstein65]. The Levenstein distance is the minimum number of unit edits (insertions, deletions or substitutions) that should be applied to the unit string in order to get another:
 
 * the distance between *pancake* and *omelet* is `r stringdist::stringdist("pancake", "omelet")`
 * the distance between *pancake* and *cake* is `r stringdist::stringdist("pancake", "cake")`
@@ -247,8 +247,8 @@ All four examples are normalized by the value 3.
 
 ## [@heeringa04]: interlanguage stimuli mismatch 
 
-* It is possible that for one of the pair of idioms one lack stimuli, then the effect of this stimuli is discounted.
-* In case of multiple transcription they are matched according the minimum distance:
+* It is possible that for one of the pair of idioms one lacks stimuli, in which case the effect of this stimulus is discounted.
+* In case of multiple transcriptions they are matched according the minimum distance:
     * L1: [hys]; L2: [hys] and [hus]
     * L1: [hys] and [hus]; L2: [hys] and [hus]
 
@@ -256,8 +256,8 @@ All four examples are normalized by the value 3.
 
 * Parametric typology:
     * annotate languages according to 27 syllable structure parameters, and 29 inventory parameters;
-    * apply Hamming distance,\footnote[frame]{That is just ordered version of Jaccard distance: ratio of similar units in two languages out of all possible units in two languages.}
-* Cross-entropy of transcribed example texts
+    * apply Hamming distance,\footnote[frame]{This is just an ordered version of the Jaccard distance: the ratio of similar units in two languages out of all possible units in two languages.}
+* Cross-entropy of the transcribed example texts
 
 \setcounter{footnote}{0}
 
@@ -290,7 +290,7 @@ tibble(a = c("A", "A", "A", "A", "B"),
 
 ## [@eden18]: Cross-entropy 
 
-Cross-entropy measure is used in order to compare two distributions $X$ and $Y$:
+A cross-entropy measure is used in order to compare the two distributions $X$ and $Y$:
 
 $$H(X, Y) = - \sum_{i = 1}^n{P(x_i)\times\log_2P(y_i)}$$
 
@@ -343,7 +343,7 @@ ratios %>%
 
 ## [@eden18]: Kullback-Leibler divergence
 
-As we have seen, if distributions $X$ and $Y$ are equal, then the cross-entropy is equal to the entropy of that distribution. So there is a way to normalize it called Kullback-Leibler divergence measure:
+As we have seen, if the distributions $X$ and $Y$ are equal, then the cross-entropy is equal to the entropy of that distribution. So there is a way to normalize it, called the Kullback-Leibler divergence measure:
 
 $$D_{KL}(P\parallel Q) = H(P, Q) − H(P )$$
 
@@ -416,13 +416,13 @@ knitr::include_graphics("images/eden18.png", dpi = 50)
 
 ## Conclusions
 
-In this talk I presented multiple methods of calculating phonological distances between languages. \pause
+In this talk I presented multiple methods of calculating the phonological distances between languages. \pause
 
-It is worth noting all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language. \pause
+It is worth noting that all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language. \pause
 
-Both complexity-based and distance based approaches are valid for language comparison:
+Both complexity-based and distance-based approaches are valid for language comparison:
 
-* the complexity-based approach probably is better by design, but it depends on feature set that should be chosen by linguists;
+* the complexity-based approach probably is better by design, but it depends on a feature set that should be chosen by linguists;
 * the distance-based approach is better in capturing all phonotactic details present in the data (as [@maddieson09] proposed), but it depends on more or less comparable data from different languages. \pause
 
 Acoustic distances in [@heeringa04] and [@eden18]!
