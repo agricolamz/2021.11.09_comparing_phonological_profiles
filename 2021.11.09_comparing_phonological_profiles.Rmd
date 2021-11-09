@@ -420,7 +420,7 @@ knitr::include_graphics("images/eden18.png", dpi = 50)
 
 In this talk I presented multiple methods of calculating the phonological distances between languages. \pause
 
-It is worth noting that all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language. \pause
+It is worth noting all of the arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language. \pause
 
 Both complexity-based and distance-based approaches are valid for language comparison:
 
