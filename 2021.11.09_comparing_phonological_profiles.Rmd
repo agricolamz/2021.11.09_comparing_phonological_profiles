@@ -28,8 +28,6 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, dev='cairo_pdf')
 options(tinytex.verbose = TRUE)
 library(tidyverse)
-theme_set(theme_bw())
-
 # create qrcode
 # library(qrcode)
 # png(filename="images/00_qrcode.png", width = 150, height = 150)
@@ -203,7 +201,7 @@ Despite of the critics that language phonological system is a complex system tha
 ## Distance based approaches
 
 * [@hoppenbrouwers01] (after [@heeringa04])
-* [@nerbonne01]
+* [@nerbonne01] (after [@heeringa04])
 * [@heeringa04]
 * [@eden18]
 * [@anderson21]
@@ -347,7 +345,7 @@ ratios %>%
 
 As we have seen, if distributions $X$ and $Y$ are equal, then the cross-entropy is equal to the entropy of that distribution. So there is a way to normalize it called Kullback-Leibler divergence measure:
 
-$$D_{KL}(P,Q) = H(P, Q) − H(P )$$
+$$D_{KL}(P\parallel Q) = H(P, Q) − H(P )$$
 
 ```{r kullback_leibler, cache=TRUE}
 entropy <- function(d){
