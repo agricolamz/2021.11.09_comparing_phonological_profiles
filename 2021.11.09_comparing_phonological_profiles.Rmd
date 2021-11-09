@@ -418,15 +418,16 @@ knitr::include_graphics("images/eden18.png", dpi = 50)
 
 ## Conclusions
 
-In this talk I presented multiple methods of calculating phonological distances between languages.
+In this talk I presented multiple methods of calculating phonological distances between languages. \pause
 
-It is worth noting all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language.
+It is worth noting all arguments against using segment inventories as a measure [@simpson99; @ohala09; @coupe09; @deutscher09], but dictionaries and corpora are not freely available for any language. \pause
 
 Both complexity-based and distance based approaches are valid for language comparison:
-* the complexity-based approach probably is better by design, but it depends on feature set that should be chosen by linguists;
-* the distance-based approach is better in capturing all phonotactic details present in the data (as [@maddieson09] proposed), but it depends on more or less comparable data from different languages.
 
-It is also worth mentioning that both [@heeringa04] and [@eden18] discuss and apply different methods for acoustic distances across languages, but I decided to categorize it as a different topic.
+* the complexity-based approach probably is better by design, but it depends on feature set that should be chosen by linguists;
+* the distance-based approach is better in capturing all phonotactic details present in the data (as [@maddieson09] proposed), but it depends on more or less comparable data from different languages. \pause
+
+Acoustic distances in [@heeringa04] and [@eden18]!
 
 ## {}
 
