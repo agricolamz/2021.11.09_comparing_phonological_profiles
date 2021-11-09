@@ -68,8 +68,9 @@ Materials for the phonological distance calculation can be different:
 
 * segment\footnote[frame]{Lets leave the phonology vs. phonetics debate aside.} inventory (and grammar, if you are lucky);
 * dictionaries;
-* parallel corpora;
-* unparalleled corpora.
+* parallel dictionaries;
+* corpora;
+* parallel corpora.
 
 \setcounter{footnote}{0}
 
@@ -396,7 +397,7 @@ ratios %>%
   knitr::kable()
 ```
 
-## [@eden18]: application
+## [@eden18]: application (greater circles stand for similar languages)
 
 * 7 languages from the corpus of European languages (Portuguese, French, Spanish, German, English, Dutch, Greek)
 
